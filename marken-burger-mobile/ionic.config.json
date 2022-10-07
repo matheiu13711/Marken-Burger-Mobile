@@ -1,0 +1,7 @@
+{
+  "name": "marken-burger-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
