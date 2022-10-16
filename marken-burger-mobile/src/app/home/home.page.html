@@ -1,22 +1,48 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Home
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ 
+    <div class="bg-tint">
+      <img class="home-bg-img" src="assets/img/bgHOME.jpg">
+    </div>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic testing lang to nilagay ko lang jericho gesmundo<a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+    <div class="main-content">
+      <div class="main-content-title">
+        Fresh and Delicious
+      </div>
+      <div class="main-content-text ion-text-left">
+        We serve the best meals with the freshiest ingredients and deliver at the best prices.
+      </div>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+          </ion-col>
+          <ion-col>
+            <ion-button class="custom-button" size="small" style="border-radius: 0px">Read More</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+    <div class="email-user-card ion-text-center">
+      Subscribe to be our <strong>item updates</strong>
+      <ion-input class="email-input" placeholder="Your email*"></ion-input>
+      <small style="font-size:12px;">*By entering your email you agree to our <u>terms & conditions</u>.</small>
+      <br>
+      <ion-button class="custom-button">Subscribe</ion-button>
+    </div>
+
 </ion-content>
 
 <!--TEST-->
