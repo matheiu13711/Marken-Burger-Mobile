@@ -1,3 +1,61 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-menu side="start" menuId="main" contentId="main">
+    <ion-content>
+      <div class="bg-color"></div>
+      <div class="header-content">
+        <img class="logo-img" src="assets/img/logo.jpg">
+        <ion-label>
+          <h2>Marken Burger</h2>
+        </ion-label>
+      </div>
+
+      <ion-list>
+        <ion-menu-toggle>
+          <ion-item [routerLink]="['/home']">
+            <ion-icon name="home" slot="start"></ion-icon>
+            <span class="nav-title">Home</span>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-icon name="fast-food" slot="start"></ion-icon>
+            <span class="nav-title">Shop</span>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-icon name="compass" slot="start"></ion-icon>
+            <span class="nav-title">Track</span>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-icon name="call" slot="start"></ion-icon>
+            <span class="nav-title">Contact</span>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item>
+            <ion-icon name="people" slot="start"></ion-icon>
+            <span class="nav-title">About Us</span>
+          </ion-item>
+        </ion-menu-toggle>
+
+  
+        
+        <!-- LOGOUT-->
+        <ion-menu-toggle>
+          <ion-item class="nav-logout">
+            <ion-icon name="log-out" slot="start" class="sidebar-icn"></ion-icon>
+            <span class="nav-title">Logout</span>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
 </ion-app>
