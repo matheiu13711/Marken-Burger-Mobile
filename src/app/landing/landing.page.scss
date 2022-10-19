@@ -1,0 +1,51 @@
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 70%;
+}
+
+.img-logo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.options{
+    width: 100%;
+    height: 30%;
+    padding: 15px;
+    margin-left: 0px auto;
+    margin-right: 0px auto;
+}
+
+img{
+    height: 355px;
+    width: 315px;
+    object-fit: contain;
+    margin-bottom: 220px;
+    margin-top: 80px;
+}
+
+.btn-register{
+    width: 90%;
+    height: 45px;
+    background-color: #228B22;
+    border-radius: 10px;
+    font-size: medium;
+    margin: 2px;
+    text-align: center;
+}
+
+.btn-login{
+    width: 90%;
+    height: 45px;
+    background-color: #FFBF00;
+    border-radius: 10px;
+    font-size: medium;
+    margin: 2px;
+    text-align: center;
+    margin-top: 10px;
+}
