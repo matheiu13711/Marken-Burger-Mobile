@@ -34,3 +34,27 @@
     font-family: 'Ubuntu';
     src: url('assets/fonts/Ubuntu-Light.ttf');
 }
+
+.form-default{
+    height: 46px;
+    width: 95%;
+    // border: 2px solid blue;
+    // border-bottom: 3px solid red;
+    border-radius: 3px;
+    background-color: rgb(214, 214, 214);
+    border: none;
+    transition: 0.07s;
+    border-bottom: 2px solid gray;
+    margin: 10px;
+
+}
+
+.form-default:focus{
+    outline: none;
+    background-color: rgb(235, 235, 235);
+    border-bottom: 4px solid red;
+    ::placeholder{
+        font-weight: bold;
+        color: red;
+    }
+}
