@@ -1,0 +1,31 @@
+.register{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.birthdate{
+    --background: rgba(44, 39, 45, 0.2);
+    &::part(content) {
+        backdrop-filter: blur(6px);
+    }
+    ion-content{
+        --background: transparent;
+        --padding: 0;
+        // --padding-start: 20px;
+        // --padding-end: 20px;
+
+        .birthday-picker{
+            position: absolute;
+            bottom: 0;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background-color: white;
+            width: 100%;
+            height: 325px;
+
+            ion-datetime{
+                width: 100%;
+            }
+        }
+    }
+}
