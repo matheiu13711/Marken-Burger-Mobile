@@ -5,35 +5,37 @@
 </ion-header>
 
 <ion-content>
-  <!-- <form [formGroup]="loginForm" (ngSubmit)="onSubmit()"></form> -->
-  <h5 style="margin-left: 10px;">LOGIN TO YOUR MARKEN ACCOUNT</h5>
-  <div class="login">
-    <input
-    type="text"
-    id="email"
-    class="form-default"
-    autocomplete="off"
-    placeholder="Enter your Username or Email"
-    >
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <h5 style="margin-left: 10px;">LOGIN TO YOUR MARKEN ACCOUNT</h5>
+    <div class="login">
+      <input
+        type="text"
+        id="email"
+        formControlName="email"
+        class="form-default"
+        autocomplete="off"
+        placeholder="Enter your Username or Email"
+      >
 
-    <input
-      type="password"
-      id="password"
-      class="form-default"
-      autocomplete="off"
-      placeholder="Enter your Password"
-    >
+      <input
+        type="password"
+        id="password"
+        formControlName="password"
+        class="form-default"
+        autocomplete="off"
+        placeholder="Enter your Password"
+      >
 
-    <button 
-      type="submit"
-      class="btn-default"
-      disabled
-    >
-    Login
+      <button 
+        type="submit"
+        class="btn-default"
+      >
+      Login
+      </button>
+    </div>
+    <button class="btn-clear"
+    [routerLink]="['/register']">
+      Don't have a Marken Account?
     </button>
-  </div>
-  <button class="btn-clear"
-  [routerLink]="['/register']">
-    Don't have a Marken Account?
-  </button>
+  </form>
 </ion-content>
