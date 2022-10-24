@@ -1,83 +1,63 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>register</ion-title>
+    <ion-buttons slot="start" (click)="previousPage()">
+      <ion-icon style="font-size: 25px" name="chevron-back-outline" class="header-back-button"> </ion-icon>Back
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-    <div class="register">
-      <input
-        type="email"
-        class="form-default"
-        placeholder="Email"
-        formControlName="email"
-        value="{{registerInfo.email}}">
-  
-      <input
-        type="text"
-        class="form-default"
-        placeholder="First Name"
-        formControlName="firstName"
-      >
-      <input
-        type="text"
-        class="form-default"
-        placeholder="Middle Name"
-        formControlName="middleName"
-      >
-      <input
-        type="text"
-        class="form-default"
-        placeholder="Last Name"
-        formControlName="lastName"
-      >
+<ion-content class="content-green">
+  <ion-card>
+    <h5 style="margin-left: 10px; color: var(--color-1);"><b>CREATE A NEW ACCOUNT</b></h5>
+    <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+      <div class="register">
+        <input type="email" class="form-default" placeholder="Email" formControlName="email">
+        <div *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">
+          <p *ngIf="registerForm.get('email').errors?.required" class="form-err-msg">Email is required.</p>
+          <p *ngIf="registerForm.get('email').errors?.email" class="error" class="form-err-msg">Invalid Email</p>
+        </div>
 
-      <ion-input
-        type="text"
-        class="form-default"
-        placeholder="Birthdate"
-        value="{{registerInfo.birthday}}"
-        id="open-modal"
-        formControlName="birthdate"
-        style="--padding-start: 10px;"
-      ></ion-input>
-  
-      <ion-modal trigger="open-modal" class="birthdate">
-        <ng-template>
-          <ion-content>
-            <div class="birthday-picker">
-              <ion-datetime presentation="date"
-              [preferWheel]="true" size="cover" #datetime
-              [showDefaultButtons]="true"
-              (ionChange)="test(datetime.value)"
-              displayFormat="MMMM DD, YYYY" pickerFormat="MMMM D YYYY"
-              >
-              </ion-datetime>
-            </div>
-          </ion-content>
-        </ng-template>
-      </ion-modal>
+        <input type="text" class="form-default" placeholder="Username" formControlName="username">
+        <div *ngIf="registerForm.get('username').invalid && registerForm.get('username').touched">
+          <p *ngIf="registerForm.get('username').errors?.required" class="form-err-msg">Username is required.</p>
+        </div>
 
-      <input
-        type="text"
-        class="form-default"
-        formControlName="password"
-        placeholder="Password"
-      >
-      <input
-        type="text"
-        class="form-default"
-        placeholder="Confirm Password"
-        formControlName="confirmPass"
-      >
-      <button 
-        type="submit"
-        class="btn-default"
-      >
-        Register
-      </button>
-    </div>
-  </form>
-  
+        <input type="text" class="form-default" placeholder="Full Name" formControlName="name">
+        <div *ngIf="registerForm.get('name').invalid && registerForm.get('name').touched">
+          <p *ngIf="registerForm.get('name').errors?.required" class="form-err-msg">Full Name is required.</p>
+        </div>
+
+        <input type="tel" class="form-default" placeholder="Phone Number" formControlName="phone_number">
+
+        <ion-input type="text" class="form-default" placeholder="Birthdate" value="{{placeholderBday}}"
+          id="open-modal" formControlName="birthdate" style="--padding-start: 10px;"></ion-input>
+
+        <ion-modal trigger="open-modal" class="birthdate">
+          <ng-template>
+            <ion-content>
+              <div class="birthday-picker">
+                <ion-datetime presentation="date" [preferWheel]="true" size="cover" #datetime
+                  [showDefaultButtons]="true" (ionChange)="datePicked(datetime.value)" displayFormat="MMMM DD, YYYY"
+                  pickerFormat="MMMM D YYYY">
+                </ion-datetime>
+              </div>
+            </ion-content>
+          </ng-template>
+        </ion-modal>
+
+        <input type="password" class="form-default" formControlName="password" placeholder="Password">
+        <div *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched">
+          <p *ngIf="registerForm.get('password').errors?.required" class="form-err-msg">Password is required.</p>
+        </div>
+        <input type="password" class="form-default" placeholder="Confirm Password" formControlName="password_confirmed">
+        <p *ngIf="registerForm.errors?.mismatch" class="form-err-msg">Password does not match.</p>
+        <button type="submit" class="btn-default">
+          Register
+        </button>
+      </div>
+    </form>
+    <button class="btn-clear" [routerLink]="['/login']">
+      Already have a Marken Account?
+    </button>
+  </ion-card>
 </ion-content>

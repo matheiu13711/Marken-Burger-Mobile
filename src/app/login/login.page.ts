@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
+import { NavController } from '@ionic/angular';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +11,12 @@ export class LoginPage implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
+    private navCtrl: NavController,
   ) { }
 
   loginForm: FormGroup = this.formBuilder.group({
-    email: [''],
-    password: [''],
+    email: ['', [Validators.required]],
+    password: ['', [Validators.required]],
   })
   ngOnInit() {
   }
@@ -26,6 +28,9 @@ export class LoginPage implements OnInit {
     }
     
     console.log(loginSubmit);
-    
+  }
+
+  previousPage(){
+    this.navCtrl.back();
   }
 }

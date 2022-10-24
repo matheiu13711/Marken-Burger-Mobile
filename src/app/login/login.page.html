@@ -1,41 +1,36 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>login</ion-title>
+    <ion-buttons slot="start" (click)="previousPage()">
+      <ion-icon style="font-size: 25px" name="chevron-back-outline" class="header-back-button"> </ion-icon>Back
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <h5 style="margin-left: 10px;">LOGIN TO YOUR MARKEN ACCOUNT</h5>
-    <div class="login">
-      <input
-        type="text"
-        id="email"
-        formControlName="email"
-        class="form-default"
-        autocomplete="off"
-        placeholder="Enter your Username or Email"
-      >
+<ion-content class="content-green">
+  <ion-card>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <h5 style="margin-left: 10px; color: var(--color-1);"><b>LOGIN TO YOUR MARKEN ACCOUNT</b></h5>
+      <div class="login">
+        <input type="text" id="email" formControlName="email" class="form-default" autocomplete="off"
+          placeholder="Enter your Username or Email">
+          <div *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">
+            <p *ngIf="loginForm.get('email').errors?.required" class="form-err-msg">Email or Username is required.</p>
+          </div>
 
-      <input
-        type="password"
-        id="password"
-        formControlName="password"
-        class="form-default"
-        autocomplete="off"
-        placeholder="Enter your Password"
-      >
+        <input type="password" id="password" formControlName="password" class="form-default" autocomplete="off"
+          placeholder="Enter your Password">
+          <div *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+            <p *ngIf="loginForm.get('password').errors?.required" class="form-err-msg">Password is required.</p>
+          </div>
 
-      <button 
-        type="submit"
-        class="btn-default"
-      >
-      Login
-      </button>
-    </div>
-    <button class="btn-clear"
-    [routerLink]="['/register']">
+        <button type="submit" class="btn-default">
+          Login
+        </button>
+      </div>
+    </form>
+
+    <button class="btn-clear" [routerLink]="['/register']">
       Don't have a Marken Account?
     </button>
-  </form>
+  </ion-card>
 </ion-content>

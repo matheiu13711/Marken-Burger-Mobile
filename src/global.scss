@@ -42,6 +42,8 @@
     --color-1-light: rgb(114, 185, 114);
     // blue
     --color-2: #067bc2;
+    // yellow
+    --color-3: #FFAD05;
 }
 
 .form-default{
@@ -67,8 +69,14 @@
     }
 }
 
+.form-err-msg{
+    color: red;
+    margin: 0;
+    margin-left: 15px;
+}
+
 .btn-default{
-    background-color: var(--color-1);
+    background-color: var(--color-3);
     height: 45px;
     width: 100%;
     border-radius: 10px;
@@ -95,4 +103,9 @@
     font-size: medium;
     margin: 10px;
     text-align: center;
+}
+
+.content-green{
+    background-color: var(--color-1);
+    --background: var(--color-1);
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { DatePipe } from '@angular/common';
+import { NavController } from '@ionic/angular';
+import { PasswordValidator } from './register.validator';
 
 @Component({
   selector: 'app-register',
@@ -9,31 +11,26 @@ import { DatePipe } from '@angular/common';
   providers: [DatePipe]
 })
 export class RegisterPage implements OnInit {
-  testBday: any;
-  testInp: any;
+  placeholderBday: any;
 
-  registerInfo = {
-    email: 'aaaaa',
-    birthday: 'asd',
-  }
   constructor(
     private formBuilder: FormBuilder,
-    private datepipe: DatePipe
+    private datepipe: DatePipe,
+    private navCtrl: NavController,
     ) { }
 
   ngOnInit() {
-    this.testInp = '100 percent';
   }
 
   registerForm: FormGroup = this.formBuilder.group({
-    email: [''],
-    firstName: [''],
-    middleName: [''],
-    lastName: [''],
-    birthdate: [''],
-    password: [''],
-    confirmPass: [''],
-  })
+    email: ['', [Validators.required, Validators.email]],
+    username: ['', [Validators.required]],
+    name: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
+    birthdate: ['', [Validators.required]],
+    phone_number: ['', [Validators.required]],
+    password: ['', [Validators.required]],
+    password_confirmed: ['', [Validators.required]],
+  }, { validator: PasswordValidator })
 
   isModalOpen = false;
 
@@ -41,21 +38,24 @@ export class RegisterPage implements OnInit {
     this.isModalOpen = isOpen;
   }
 
-  dateChange(value){
-    this.testBday = value;
-    console.log(this.testBday);
-    
-  }
-
   async onSubmit(){
     let registerSubmit = {
       'email': this.registerForm.controls.email.value,
-      'birthdate': this.registerForm.controls.birthdate.value,
+      'username': this.registerForm.controls.username.value,
+      'name': this.registerForm.controls.name.value,
+      'birthdate': this.datepipe.transform(this.registerForm.controls.birthdate.value, 'yyyy/dd/MM'),
+      'phone_number': this.registerForm.controls.phone_number.value,
+      'password': this.registerForm.controls.password.value,
+      'password_confirmed': this.registerForm.controls.password_confirmed.value,
     }
     console.log(registerSubmit);
   }
 
-  test(value){
-    this.registerInfo.birthday = this.datepipe.transform(value, 'MMMM dd, YYYY');
+  datePicked(value){
+    this.placeholderBday = this.datepipe.transform(value, 'MMMM dd, YYYY');
+  }
+
+  previousPage(){
+    this.navCtrl.back();
   }
 }
