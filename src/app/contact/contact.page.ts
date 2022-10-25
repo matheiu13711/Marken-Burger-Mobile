@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NavController } from '@ionic/angular';
+import { ApiService } from '../api.service';
 
 @Component({
   selector: 'app-contact',
@@ -8,10 +9,12 @@ import { NavController } from '@ionic/angular';
   styleUrls: ['./contact.page.scss'],
 })
 export class ContactPage implements OnInit {
+  contactData: any;
 
   constructor(
     private formBuilder: FormBuilder,
-    private navCtrl: NavController
+    private navCtrl: NavController,
+    private ApiService: ApiService
   ) { }
 
   ContactForm: FormGroup = this.formBuilder.group({
@@ -24,13 +27,18 @@ export class ContactPage implements OnInit {
   }
 
   async onSubmit(){
-    let loginSubmit = {
+    let ContactSubmit = {
       'senderName' : this.ContactForm.controls.senderName.value,
       'senderEmail' : this.ContactForm.controls.senderEmail.value,
       'senderMessage' : this.ContactForm.controls.senderMessage.value,
     }
     
-    console.log(loginSubmit);
+    console.log(ContactSubmit);
+
+    this.ApiService.postFeedback(ContactSubmit).subscribe((data: any) => {
+    this.contactData = data;
+    console.log(data);
+    })
   }
 
 }

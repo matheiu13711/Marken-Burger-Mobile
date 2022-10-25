@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators} from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import { NavController } from '@ionic/angular';
 import { PasswordValidator } from './register.validator';
+import { ApiService } from '../api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -12,11 +14,14 @@ import { PasswordValidator } from './register.validator';
 })
 export class RegisterPage implements OnInit {
   placeholderBday: any;
+  Registerdata: any;
 
   constructor(
     private formBuilder: FormBuilder,
     private datepipe: DatePipe,
     private navCtrl: NavController,
+    private ApiService: ApiService,
+    private router: Router
     ) { }
 
   ngOnInit() {
@@ -49,6 +54,14 @@ export class RegisterPage implements OnInit {
       'password_confirmed': this.registerForm.controls.password_confirmed.value,
     }
     console.log(registerSubmit);
+
+    this.ApiService.postRegister(registerSubmit).subscribe((data: any) => {
+      this.Registerdata = data;
+      this.router.navigate(['login']);
+      console.log(data);
+    });
+
+  
   }
 
   datePicked(value){

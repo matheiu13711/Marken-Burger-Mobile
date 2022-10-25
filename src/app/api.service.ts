@@ -17,4 +17,19 @@ export class ApiService {
   getProducts(){
     return this.http.get(env.apiURL + '/api/product');
   }
+
+  postRegister(data: any) {
+    return this.http.post(env.apiURL + '/api/register', data
+    );
+  }
+
+  postLogin(data: any) {
+    return this.http.post(env.apiURL + '/api/login', data
+    );
+  }
+
+  postFeedback(data: any) {
+    return this.http.post(env.apiURL + '/api/feedback', data
+    );
+  }
 }
