@@ -15,15 +15,40 @@
       <h2>Get in Touch!</h2>
     </div>
   </div>
-
+  <form [formGroup]="ContactForm" (ngSubmit)="onSubmit()">
   <div class="contact-form">
-   <ion-input class="name-input" placeholder="Your Full Name*"></ion-input>
-   <ion-input class="email-input" placeholder="Your Email*"></ion-input>
+    <!--SENDER NAME-->
+    <input type="text" formControlName="senderName" class="name-input" autocomplete="off"
+    placeholder="Enter your Username or Email">
+    <div *ngIf="ContactForm.get('senderName').invalid && ContactForm.get('senderName').touched">
+      <p *ngIf="ContactForm.get('senderName').errors?.required" class="form-err-msg">Name is required</p>
+    </div>
+
+    <!--SENDER EMAIL-->
+    <input type="text" id="email" formControlName="senderEmail" class="name-input" autocomplete="off"
+    placeholder="Your Email*">
+    <div *ngIf="ContactForm.get('senderEmail').invalid && ContactForm.get('senderEmail').touched">
+      <p *ngIf="ContactForm.get('senderEmail').errors?.required" class="form-err-msg">Email is required.</p>
+    </div>
+
+    <!--SENDER MESSAGE-->
+    <input type="text" id="email" formControlName="senderMessage" class="message-input" autocomplete="off"
+    placeholder="Your Message*">
+    <div *ngIf="ContactForm.get('senderMessage').invalid && ContactForm.get('senderMessage').touched">
+      <p *ngIf="ContactForm.get('senderMessage').errors?.required" class="form-err-msg">Message is required.</p>
+    </div>
+   
+
+   
+   <!---<ion-input class="email-input" placeholder="Your Email*"></ion-input>
    <ion-input class="message-input" placeholder="Your Message*"></ion-input>
+   -->
+
 
    <div class="btn-submit">
-    <ion-button class="custom-button">Submit</ion-button>
+    <ion-button class="custom-button" (click)="onSubmit()">Submit</ion-button>
    </div>
   </div>
+  </form>
 
 </ion-content>
