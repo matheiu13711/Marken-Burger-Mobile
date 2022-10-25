@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>shop</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col  *ngFor="let item of products; let number=index;" size="6">
+        <ion-card>
+          <ion-card-header>
+            <h1>{{item.name}}</h1>
+            <h3>Php {{item.price}}</h3>
+          </ion-card-header>
+          <ion-card-content>
+            <img src="{{imgUrl + item.image}}">
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <!-- <ion-card *ngFor="let item of products; let number=index;">
+    <h1>{{item.name}}</h1>
+    <h3>Php {{item.price}}</h3>
+  </ion-card> -->
+</ion-content>

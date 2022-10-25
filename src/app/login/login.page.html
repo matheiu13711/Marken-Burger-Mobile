@@ -23,7 +23,7 @@
             <p *ngIf="loginForm.get('password').errors?.required" class="form-err-msg">Password is required.</p>
           </div>
 
-        <button type="submit" class="btn-default">
+        <button type="submit" class="btn-secondary" [routerLink]="['/home']">
           Login
         </button>
       </div>

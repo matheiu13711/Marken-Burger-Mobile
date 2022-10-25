@@ -44,6 +44,8 @@
     --color-2: #067bc2;
     // yellow
     --color-3: #FFAD05;
+    --color-3-dark: #c58504;
+    --color-3-light: #fdba34;
 }
 
 .form-default{
@@ -76,7 +78,7 @@
 }
 
 .btn-default{
-    background-color: var(--color-3);
+    background-color: var(--color-1);
     height: 45px;
     width: 100%;
     border-radius: 10px;
@@ -93,6 +95,27 @@
 .btn-default:disabled{
     background-color: var(--color-1-light);
 }
+
+.btn-secondary{
+    background-color: var(--color-3);
+    height: 45px;
+    width: 100%;
+    border-radius: 10px;
+    color: white;
+    font-size: medium;
+    margin: 10px;
+    text-align: center;
+}
+
+.btn-secondary:active{
+    background-color: var(--color-3-dark);
+}
+
+.btn-secondary:disabled{
+    background-color: var(--color-3-light);
+}
+
+
 
 .btn-clear{
     background-color: transparent;
