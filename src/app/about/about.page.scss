@@ -1,26 +1,17 @@
 .header-bg{
-    z-index: -2;
 
     img{
         width: 100%;
         height: 250px;
         object-fit: cover;
-        position: absolute;
-        z-index: -1;
         margin-top: -20px;
-    }
-
-    h2{
-        font-weight: bold;
-        font-size: 40px;
-        text-align: center;
-        color: white;
-        padding-top: 50px;
     }
 }
 
-.contact-form{
+.company-content{
     text-align:center;
+    align-items: center;
+    justify-items: center;
     width: 90%;
     height: auto;
     background: #171717;
@@ -29,50 +20,28 @@
     font-family: Ubuntu !important;
     font-size: 22px;
     margin: 0px auto;
-    margin-top: 100px;
+    margin-top: 50px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
                 rgba(0, 0, 0, 0.07) 0px 2px 4px,
                 rgba(0, 0, 0, 0.07) 0px 4px 8px, 
                 rgba(0, 0, 0, 0.07) 0px 8px 16px, 
                 rgba(0, 0, 0, 0.07) 0px 16px 32px, 
                 rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+                h2{
+                    font-size: 27px;
+                    color: #228B22;
+                    font-weight: bold;
+                }
+
+                h3{
+                    font-size: 21px;
+                    color: white;
+                }
+
 }
 
-.name-input, .email-input{
-    background-color: white;
-    border-radius: 10px;
-    width: 90%;
-    height: 40px;
-    margin: auto;
-    margin-top: 15px;
-    font-size: 18px; 
-}
-
-.message-input{
-    background-color: white;
-    border-radius: 10px;
-    width: 90%;
-    height: 120px;
-    margin: auto;
-    margin-top: 15px;
-    font-size: 18px; 
-}
-
-.btn-submit{
-    text-align: center;
-    margin-top: 20px;
-}
-
-.form-err-msg{
-    color: red;
-    margin: 0;
-    text-align: left;
-    font-size: 16px;
-    margin-left: 15px;
-    margin-top: 2px;
-}
-
-.freq-div{
+.company-founders{
     text-align:center;
     align-items: center;
     justify-items: center;
@@ -84,7 +53,7 @@
     font-family: Ubuntu !important;
     font-size: 22px;
     margin: 0px auto;
-    margin-top: 100px;
+    margin-top: 50px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
                 rgba(0, 0, 0, 0.07) 0px 2px 4px,
                 rgba(0, 0, 0, 0.07) 0px 4px 8px, 
@@ -94,20 +63,30 @@
 
                 h2{
                     font-size: 27px;
-                }
-
-
-                h3{
-                    font-size: 20px;
+                    color: #228B22;
                     font-weight: bold;
                 }
 
-                h4{
-                    font-size: 20px;
-                    margin-bottom: 20px;
+                img{
+                    border-radius: 50%;
+                    margin-top: 30px;
+                    border: 5px solid #171717;
                 }
+
+                h3{
+                    font-size: 22px;
+                }
+
+                h4{
+                    font-size: 15px;
+                }
+
+             ion-icon{
+                margin-bottom: 10px;
+             }
+        
+
+
 
 
 }
-
-

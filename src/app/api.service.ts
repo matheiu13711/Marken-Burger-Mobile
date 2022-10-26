@@ -32,4 +32,15 @@ export class ApiService {
     return this.http.post(env.apiURL + '/api/feedback', data
     );
   }
+
+  getHeadersWithBearer() {
+    let accessToken = localStorage.getItem('token');
+    let httpOptionsWithBearer = {
+      headers: new HttpHeaders({
+        Accept: 'application/json',
+        Authorization: 'Bearer ' + accessToken,
+      }),
+    };
+    return httpOptionsWithBearer;
+  }
 }
