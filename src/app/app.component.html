@@ -49,7 +49,7 @@
         
         <!-- LOGOUT-->
         <ion-menu-toggle>
-          <ion-item class="nav-logout" [routerLink]="['/landing']">
+          <ion-item class="nav-logout" (click)="logout()">
             <ion-icon name="log-out" slot="start" class="sidebar-icn"></ion-icon>
             <span class="nav-title">Logout</span>
           </ion-item>

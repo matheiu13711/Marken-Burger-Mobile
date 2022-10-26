@@ -19,12 +19,14 @@ export class ApiService {
   }
 
   postRegister(data: any) {
-    return this.http.post(env.apiURL + '/api/register', data
+    return this.http.post(env.apiURL + '/api/register', data,
     );
   }
 
   postLogin(data: any) {
-    return this.http.post(env.apiURL + '/api/login', data
+    return this.http.post(env.apiURL + '/api/login',
+    data,
+    this.getHeadersWithBearer()
     );
   }
 
