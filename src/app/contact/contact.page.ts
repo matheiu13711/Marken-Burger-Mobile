@@ -38,6 +38,7 @@ export class ContactPage implements OnInit {
     this.ApiService.postFeedback(ContactSubmit).subscribe((data: any) => {
     this.contactData = data;
     console.log(data);
+    this.ContactForm.reset();
     })
   }
 

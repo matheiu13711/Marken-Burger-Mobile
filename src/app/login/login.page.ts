@@ -32,16 +32,19 @@ export class LoginPage implements OnInit {
       'password' : this.loginForm.controls.password.value,
     }
     console.log(loginSubmit);
-    
+
     this.ApiService.postLogin(loginSubmit).subscribe((data: any) => {
     this.loginData = data;
-    this.router.navigate(['home']);
-    console.log(data);
-    console.log(data);
+    if(data.status_code == 200){
+      this.router.navigate(['home']);
+      console.log(data);
+    } else{
+      console.log(data);
+      console.log('Email or password is incorrect');
+    }
     });
     
   }
-  
 
   previousPage(){
     this.navCtrl.back();

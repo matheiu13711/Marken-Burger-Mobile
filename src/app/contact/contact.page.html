@@ -19,7 +19,7 @@
   <div class="contact-form">
     <!--SENDER NAME-->
     <input type="text" formControlName="senderName" class="name-input" autocomplete="off"
-    placeholder="Enter your Username or Email">
+    placeholder="Enter your Name">
     <div *ngIf="ContactForm.get('senderName').invalid && ContactForm.get('senderName').touched">
       <p *ngIf="ContactForm.get('senderName').errors?.required" class="form-err-msg">Name is required</p>
     </div>

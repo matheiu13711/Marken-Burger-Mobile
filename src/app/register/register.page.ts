@@ -48,7 +48,7 @@ export class RegisterPage implements OnInit {
       'email': this.registerForm.controls.email.value,
       'username': this.registerForm.controls.username.value,
       'name': this.registerForm.controls.name.value,
-      'birthdate': this.datepipe.transform(this.registerForm.controls.birthdate.value, 'yyyy/dd/MM'),
+      'birthdate': this.datepipe.transform(this.registerForm.controls.birthdate.value, 'yyyy-MM-dd'),
       'phone_number': this.registerForm.controls.phone_number.value,
       'password': this.registerForm.controls.password.value,
       'password_confirmed': this.registerForm.controls.password_confirmed.value,

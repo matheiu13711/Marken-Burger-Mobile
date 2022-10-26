@@ -24,9 +24,7 @@ export class ApiService {
   }
 
   postLogin(data: any) {
-    return this.http.post(env.apiURL + '/api/login',
-    data,
-    this.getHeadersWithBearer()
+    return this.http.post(env.apiURL + '/api/login', data,
     );
   }
 
