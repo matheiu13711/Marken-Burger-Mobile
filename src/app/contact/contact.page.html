@@ -17,7 +17,10 @@
   </div>
   <form [formGroup]="ContactForm" (ngSubmit)="onSubmit()">
   <div class="contact-form">
+    <h2 class="title-contact">Email Us</h2>
+    <ion-icon name="mail-outline"></ion-icon>
     <!--SENDER NAME-->
+    <h4 class="form-sub">Name:</h4>
     <input type="text" formControlName="senderName" class="name-input" autocomplete="off"
     placeholder="Enter your Name">
     <div *ngIf="ContactForm.get('senderName').invalid && ContactForm.get('senderName').touched">
@@ -25,6 +28,7 @@
     </div>
 
     <!--SENDER EMAIL-->
+    <h4 class="form-sub">Email:</h4>
     <input type="text" id="email" formControlName="senderEmail" class="name-input" autocomplete="off"
     placeholder="Your Email*">
     <div *ngIf="ContactForm.get('senderEmail').invalid && ContactForm.get('senderEmail').touched">
@@ -32,6 +36,7 @@
     </div>
 
     <!--SENDER MESSAGE-->
+    <h4 class="form-sub">Message:</h4>
     <input type="text" id="email" formControlName="senderMessage" class="message-input" autocomplete="off"
     placeholder="Your Message*">
     <div *ngIf="ContactForm.get('senderMessage').invalid && ContactForm.get('senderMessage').touched">
