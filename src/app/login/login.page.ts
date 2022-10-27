@@ -38,6 +38,8 @@ export class LoginPage implements OnInit {
     if(data.status_code == 200){
       this.router.navigate(['home']);
       console.log(data);
+      localStorage.setItem('token', data.token);
+      console.log(data.token);
     } else{
       console.log(data);
       console.log('Email or password is incorrect');
