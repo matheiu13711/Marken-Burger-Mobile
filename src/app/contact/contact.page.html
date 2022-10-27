@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
-      <ion-title>Contact</ion-title>
+      <ion-title class="title-header">Contact</ion-title>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -19,6 +19,7 @@
   <div class="contact-form">
     <h2 class="title-contact">Email Us</h2>
     <ion-icon name="mail-outline"></ion-icon>
+    <h3 class="email-instruction">Fill up the form below and we will get back to you within 24 hours</h3>
     <!--SENDER NAME-->
     <h4 class="form-sub">Name:</h4>
     <input type="text" formControlName="senderName" class="name-input" autocomplete="off"
@@ -55,6 +56,28 @@
    </div>
   </div>
   </form>
+
+
+  <!--Contact Information-->
+  <div class="contact-info-section">
+    <h2 class="title-contact">Call Us</h2>
+    <ion-icon name="call-outline"></ion-icon>
+    <h3 class="cp-num">+639581452614</h3>
+    <h4 class="outline-instruction">For ordering information and to learn more, contact us using the number provided</h4>
+  </div>
+
+  <!--Social Media-->
+  <div class="platform-section">
+    <h2 class="title-contact">Our Social Media</h2>
+    <h4 class="soc-name"><ion-icon name="logo-facebook"></ion-icon> Marken Burger Inc.</h4>
+    <ion-button class="custom-btn">Visit</ion-button>
+    <h4 class="soc-name"><ion-icon name="logo-twitter"></ion-icon> Marken Burger Inc.</h4>
+    <ion-button class="custom-btn">Visit</ion-button>
+    <h4 class="soc-name"><ion-icon name="logo-instagram"></ion-icon> Marken Burger Inc.</h4>
+    <ion-button class="custom-btn">Visit</ion-button>
+  
+    <h4 class="outline-instruction">Find us elsewhere</h4>
+  </div>
 
   <!--FAQ'S-->
   <div class="freq-div">

@@ -44,6 +44,10 @@
                     font-weight: bold;
                 }
 
+                .email-instruction{
+                    font-size: 17px;
+                }
+
                 ion-icon{
                     color: #2cb42c;
                     font-size: 32px;
@@ -93,6 +97,98 @@
     margin-top: 2px;
 }
 
+.contact-info-section{
+    text-align:center;
+    width: 90%;
+    height: auto;
+    background: #171717;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Ubuntu !important;
+    font-size: 22px;
+    margin: 0px auto;
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
+                rgba(0, 0, 0, 0.07) 0px 2px 4px,
+                rgba(0, 0, 0, 0.07) 0px 4px 8px, 
+                rgba(0, 0, 0, 0.07) 0px 8px 16px, 
+                rgba(0, 0, 0, 0.07) 0px 16px 32px, 
+                rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+
+                .title-contact{
+                    color: #2cb42c;
+                    font-size: 27px;
+                    font-weight: bold;
+                }
+
+                .cp-num{
+                    font-size: 20px;
+                    margin-top: 15px;
+                }
+
+                .outline-instruction{
+                    font-size: 16px;
+                }
+
+                ion-icon{
+                    color: #2cb42c;
+                    font-size: 32px;
+                    font-weight: bold;
+                }
+
+
+}
+
+.platform-section{
+    text-align:center;
+    width: 90%;
+    height: auto;
+    background: #171717;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Ubuntu !important;
+    font-size: 22px;
+    margin: 0px auto;
+    margin-top: 30px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
+                rgba(0, 0, 0, 0.07) 0px 2px 4px,
+                rgba(0, 0, 0, 0.07) 0px 4px 8px, 
+                rgba(0, 0, 0, 0.07) 0px 8px 16px, 
+                rgba(0, 0, 0, 0.07) 0px 16px 32px, 
+                rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+
+                .title-contact{
+                    color: #2cb42c;
+                    font-size: 27px;
+                    font-weight: bold;
+                }
+
+                .soc-name{
+                    font-size: 20px;
+                    margin-top: 15px;
+                }
+
+                .outline-instruction{
+                    font-size: 16px;
+                }
+
+                ion-icon{
+                    font-size: 25px;
+                }
+
+                .custom-btn{
+                    border-radius:7px;
+                    --background: white;
+                    color: black;
+                }
+
+
+}
+
 .freq-div{
     text-align:center;
     align-items: center;
@@ -105,7 +201,7 @@
     font-family: Ubuntu !important;
     font-size: 22px;
     margin: 0px auto;
-    margin-top: 100px;
+    margin-top: 30px;
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
                 rgba(0, 0, 0, 0.07) 0px 2px 4px,

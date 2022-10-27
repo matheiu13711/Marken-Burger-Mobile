@@ -2,7 +2,7 @@
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
-      <ion-title>Home</ion-title>
+      <ion-title class="title-header">Home</ion-title>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
@@ -42,6 +42,33 @@
       <small style="font-size:12px;">*By entering your email you agree to our <u>terms & conditions</u>.</small>
       <br>
       <ion-button class="custom-button">Subscribe</ion-button>
+    </div>
+
+    <!--SLIDES-->
+    <div class="trending-products">
+      <h2 class="title-product">Trending Products</h2>
+
+      <ion-slides [options]="sliderConfig">
+        <ion-slide *ngFor="let product of this.products">
+            <ion-card class="products-card">
+              <ion-card-header>
+                <img src="{{imgUrl + product.image}}">
+                <ion-card-title  class="card-name">
+                  {{ product.name }}
+                </ion-card-title>
+                <span class="card-price">
+                  ₱{{ product.price }}
+                </span>
+                <ion-card-content>
+
+                  <ion-button class="custom-button" expand="full" [routerLink]="['/shop']">View
+                    Item</ion-button>
+                </ion-card-content>
+              </ion-card-header>
+            </ion-card>
+          
+        </ion-slide>
+      </ion-slides>
     </div>
 
 </ion-content>
