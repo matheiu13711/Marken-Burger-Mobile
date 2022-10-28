@@ -1,0 +1,127 @@
+.header-bg{
+    z-index: -2;
+
+    img{
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+        margin-top: -20px;
+    }
+
+    h2{
+        font-weight: bold;
+        font-size: 40px;
+        text-align: center;
+        color: white;
+        padding-top: 50px;
+    }
+}
+
+.track-form{
+    text-align:center;
+    width: 90%;
+    height: auto;
+    background: #171717;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Ubuntu !important;
+    font-size: 22px;
+    margin: 0px auto;
+    margin-top: 50px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
+                rgba(0, 0, 0, 0.07) 0px 2px 4px,
+                rgba(0, 0, 0, 0.07) 0px 4px 8px, 
+                rgba(0, 0, 0, 0.07) 0px 8px 16px, 
+                rgba(0, 0, 0, 0.07) 0px 16px 32px, 
+                rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+                .title-contact{
+                    color: #2cb42c;
+                    font-size: 27px;
+                    font-weight: bold;
+                }
+
+                .email-instruction{
+                    font-size: 17px;
+                }
+
+                ion-icon{
+                    color: #2cb42c;
+                    font-size: 32px;
+                    font-weight: bold;
+                }
+
+                .form-sub{
+                    font-size: 18px;
+                    text-align: left;
+                    margin-left: 20px;
+                    margin-bottom: -15px;
+                }
+
+}
+
+.input-txt{
+    background-color: white;
+    border-radius: 10px;
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    margin-top: 15px;
+    font-size: 18px; 
+}
+
+.btn-submit{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.form-err-msg{
+    color: red;
+    margin: 0;
+    text-align: left;
+    font-size: 16px;
+    margin-left: 15px;
+    margin-top: 2px;
+}
+
+.track-result{
+    text-align:center;
+    width: 90%;
+    height: auto;
+    background: #d8d8d8;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: Ubuntu !important;
+    font-size: 22px;
+    margin: 0px auto;
+    margin-top: 40px;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
+                rgba(0, 0, 0, 0.07) 0px 2px 4px,
+                rgba(0, 0, 0, 0.07) 0px 4px 8px, 
+                rgba(0, 0, 0, 0.07) 0px 8px 16px, 
+                rgba(0, 0, 0, 0.07) 0px 16px 32px, 
+                rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+                .title-contact{
+                    font-size: 25px;
+                    font-weight: bold;
+                    color: #2cb42c;
+                }
+
+                .title-sub{
+                    text-align: left;
+                    font-size: 20px;
+                    color: #171717;
+
+                    span{
+                        font-weight: bold;
+                        color: #171717;
+                        padding: 7px;
+                    }
+                }
+
+}

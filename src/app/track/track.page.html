@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+      <ion-title class="title-header">Track</ion-title>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="header-bg">
+    <img src="assets/img/track-order.jpg">
+    <h2>Track your Order Real Time</h2>
+  </div>
+
+  <!--FORM-->
+  <form [formGroup]="TrackForm" (ngSubmit)="onSubmit()">
+    <div class="track-form">
+      <h2 class="title-contact">Track your Order</h2>
+      <ion-icon name="location-outline"></ion-icon>
+      <h3 class="email-instruction">Track your order in one place and never miss a delivery again</h3>
+      <!--SENDER NAME-->
+      <h4 class="form-sub">Order ID:</h4>
+      <input type="text" formControlName="senderName" class="input-txt" autocomplete="off"
+      placeholder="Enter your Order ID">
+      <div *ngIf="TrackForm.get('senderName').invalid && TrackForm.get('senderName').touched">
+        <p *ngIf="TrackForm.get('senderName').errors?.required" class="form-err-msg">Order ID is required</p>
+      </div>
+  
+  
+     <div class="btn-submit">
+      <ion-button class="custom-button" (click)="onSubmit()">Track</ion-button>
+     </div>
+
+
+    </div>
+    </form>
+
+    <div class="track-result">
+      <div class="title-contact">The status of your order is</div>
+      <h2 class="title-sub"><span>Status:</span> On Going</h2>
+      <h2 class="title-sub"><span>Total Paid:</span></h2>
+      <h2 class="title-sub"><span>Order Summary:</span></h2>
+    </div>
+
+</ion-content>

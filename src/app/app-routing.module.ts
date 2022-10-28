@@ -48,13 +48,18 @@ const routes: Routes = [
   {
     path: 'about',
     loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
-  },  {
+  },
+  {
     path: 'cart-modal',
     loadChildren: () => import('./cart-modal/cart-modal.module').then( m => m.CartModalPageModule)
   },
   {
     path: 'order-success',
     loadChildren: () => import('./order-success/order-success.module').then( m => m.OrderSuccessPageModule)
+  },
+  {
+    path: 'track',
+    loadChildren: () => import('./track/track.module').then( m => m.TrackPageModule)
   },
 
   
