@@ -36,10 +36,20 @@
   object-fit: cover;
 }
 
+ion-toolbar{
+  --background: var(--color-3);
+}
+
+ion-menu-button{
+  color: white;
+}
+
 .bg-tint{
   z-index:-2;
   // background: black;
 }
+
+
 
 .main-content{
   padding:20px;
@@ -70,7 +80,7 @@
 .main-content-title{
   font-family: Ubuntu !important;
   font-weight: 1000;
-  font-size: 38px;
+  font-size: 35px;
   color: white;
   margin-top: 45px;
 }
