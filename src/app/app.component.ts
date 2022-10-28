@@ -25,10 +25,15 @@ export class AppComponent {
       .subscribe((res: any) => {
         console.log(res);
         localStorage.clear();
-        this.router.navigateByUrl('login');
+        this.router.navigateByUrl('landing');
         console.log(localStorage);
         console.log('Logout successfully');
-      },)
+      }, (err: any) => {
+        console.log(err);
+        
+        localStorage.clear();
+        this.router.navigateByUrl('landing');
+      })
 
   }
 }

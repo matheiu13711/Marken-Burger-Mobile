@@ -45,7 +45,7 @@
     // yellow
     --color-3: #FFAD05;
     --color-3-dark: #c58504;
-    --color-3-light: #fdba34;
+    --color-3-light: #fff6e4;
 }
 
 .form-default{
@@ -135,4 +135,8 @@
 .content-green{
     background-color: var(--color-1);
     --background: var(--color-1);
+}
+
+.back-btn{
+    color: white;
 }

@@ -28,10 +28,15 @@
         </div>
 
         <input type="tel" class="form-default" placeholder="Phone Number" formControlName="phone_number">
+        <div *ngIf="registerForm.get('phone_number').invalid && registerForm.get('phone_number').touched" style="display: flex; flex-wrap: wrap;">
+          <p *ngIf="registerForm.get('phone_number').errors?.required" class="form-err-msg">Phone Number is required.</p>
+        </div>
 
-        <ion-input type="text" class="form-default" placeholder="Birthdate" value="{{placeholderBday}}"
-          id="open-modal" formControlName="birthdate" style="--padding-start: 10px;"></ion-input>
-
+        <div style="width: 100%; padding: 10px;">
+          <ion-input type="text" class="form-default" placeholder="Birthdate" value="{{placeholderBday}}"
+          id="open-modal" formControlName="birthdate" style="--padding-start: 10px; width: 100%; margin: 0;"></ion-input>
+        </div>
+          
         <ion-modal trigger="open-modal" class="birthdate">
           <ng-template>
             <ion-content>

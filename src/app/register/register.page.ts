@@ -32,7 +32,7 @@ export class RegisterPage implements OnInit {
     username: ['', [Validators.required]],
     name: ['', [Validators.required, Validators.pattern('[a-zA-Z ]*')]],
     birthdate: ['', [Validators.required]],
-    phone_number: ['', [Validators.required]],
+    phone_number: ['', [Validators.required, Validators.maxLength(10)]],
     password: ['', [Validators.required]],
     password_confirmed: ['', [Validators.required]],
   }, { validator: PasswordValidator })

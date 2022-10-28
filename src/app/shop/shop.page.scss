@@ -1,0 +1,41 @@
+ion-content{
+    --background: rgb(255, 242, 242);
+    // rgb(233, 244, 255); var(--color-1-light);
+}
+
+ion-card{
+    height: 230px;
+    img{
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+ion-card-header{
+    padding: 10px;
+    h4{
+        margin: 0;
+    }
+}
+
+ion-toolbar{
+    --background: var(--color-3);
+}
+
+.notif{
+    width: 25px;
+    height: 25px;
+    color: white;
+    border-radius: 100%;
+    background-color: red;
+    position: absolute;
+    top: -7px;
+    right: -5px;
+    z-index: 1;
+    text-align: center;
+    p{
+        position: relative;
+        top: -11px;
+    }
+}

@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" (click)="previousPage()" class="back-btn">
+      <ion-icon style="font-size: 25px;" name="chevron-back-outline" class="header-back-button"> </ion-icon>Back
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <img src="{{imgUrl + productPrev.image}}">
+  <div class="details">
+    <div class="header">
+      <h1>{{productPrev.name}}</h1>
+      <h5>Php {{productPrev.price}}</h5>
+    </div>
+    <div class="line"></div>
+    <h5>{{productPrev.description}}</h5>
+  </div>
+  
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <div class="notif">
+      <p>{{cartItemCount | async}}</p>
+    </div>
+    <ion-fab-button (click)="openCart()">
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-button (click)="addToCart(productPrev)" color="dark">
+      <p>Add to Cart </p><ion-icon name="cart-outline"></ion-icon><p>+</p>
+    </ion-button>
+  </ion-toolbar>
+</ion-footer>

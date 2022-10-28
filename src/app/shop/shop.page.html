@@ -1,6 +1,8 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>shop</ion-title>
+    <ion-buttons slot="start" (click)="previousPage()" class="back-btn">
+      <ion-icon style="font-size: 25px" name="chevron-back-outline" class="header-back-button"> </ion-icon>Back
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -8,14 +10,13 @@
   <ion-grid>
     <ion-row>
       <ion-col  *ngFor="let item of products; let number=index;" size="6">
-        <ion-card>
+        <ion-card (click)="viewProduct(item.id)" style="margin: 0;">
+          <img src="{{imgUrl + item.image}}">
           <ion-card-header>
-            <h1>{{item.name}}</h1>
-            <h3>Php {{item.price}}</h3>
+            <h3 style="margin: 0;">{{item.name}}</h3>
+            <h4 style="margin: 0; color: black; font-weight: bold;">Php {{item.price}}</h4>
           </ion-card-header>
-          <ion-card-content>
-            <img src="{{imgUrl + item.image}}">
-          </ion-card-content>
+          
         </ion-card>
       </ion-col>
     </ion-row>
@@ -24,4 +25,12 @@
     <h1>{{item.name}}</h1>
     <h3>Php {{item.price}}</h3>
   </ion-card> -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <div class="notif">
+      <p>{{cartItemCount | async}}</p>
+    </div>
+    <ion-fab-button (click)="openCart()">
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

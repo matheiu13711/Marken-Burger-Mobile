@@ -39,6 +39,7 @@ export class LoginPage implements OnInit {
       this.router.navigate(['home']);
       console.log(data);
       localStorage.setItem('token', data.token);
+      localStorage.setItem('id', data.id);
       console.log(data.token);
     } else{
       console.log(data);

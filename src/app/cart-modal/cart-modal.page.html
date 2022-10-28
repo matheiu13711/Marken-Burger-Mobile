@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <h5 slot="end" (click)="closeCart()" style="margin: 0; color: var(--color-2);">Close</h5>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="cart == 0; else elseBlock" class="empty">
+    <h1>Your cart is empty</h1>
+    <div class="line"></div>
+  </div>
+  <ion-row *ngFor="let i of cart">
+    <div class="product" #elseBlock>
+      <img src="{{imgUrl + i.image}}" class="thumbnail">
+      <p>{{i.name}} {{i.quantity}}x</p>
+      <div>
+        <ion-button (click)="decreaseItem(i)" color="medium" ><ion-icon name="remove-circle-outline"></ion-icon></ion-button>
+        <ion-button (click)="increaseItem(i)" color="medium" ><ion-icon name="add-circle-outline"></ion-icon></ion-button>
+        <ion-button (click)="removeItem(i)" color="dark" ><ion-icon name="trash-outline"></ion-icon></ion-button>
+      </div>
+    </div>
+    <div class="line"></div>
+  </ion-row>
+  <ion-row>
+    <div class="total">
+      <h3>Your total:</h3>
+      <h3>{{total | number:'1.1-2'}}</h3>
+    </div>
+  </ion-row>
+  
+  
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-button color="warning" (click)="postOrder()" [disabled]="cart == 0">Submit Order</ion-button>
+  </ion-toolbar>
+</ion-footer>

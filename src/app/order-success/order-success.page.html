@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-header class="header-details">
+      <ion-card-title>Order Details</ion-card-title>
+    </ion-card-header>
+    <ion-card-content class="content-details">
+      <br>
+      <h1>User ID: {{orderDetails.userID}}</h1>
+
+      <div class="line"></div>
+
+      <h1>Your order ID:</h1>
+      <div class="orderID">
+        <p>{{orderDetails.orderID}}</p>
+        <ion-button fill="none" color="dark" (click)="copyID()"><ion-icon name="copy-outline"></ion-icon></ion-button>
+      </div>
+      
+
+      <div class="line"></div>
+
+      <h1>Order Summary:</h1>
+      <div [innerHTML]="orderDescription"></div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="navigation">
+    <ion-button color="warning" [routerLink]="['/shop']">Order Again?</ion-button>
+    <ion-button color="dark" fill="outline" [routerLink]="['/home']">To Home Page</ion-button>
+  </ion-card>
+</ion-content>

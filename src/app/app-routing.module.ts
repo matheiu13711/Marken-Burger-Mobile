@@ -26,18 +26,38 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  },  {
+  },
+  {
     path: 'contact',
     loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
   },
   {
     path: 'shop',
-    loadChildren: () => import('./shop/shop.module').then( m => m.ShopPageModule)
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('./shop/shop.module').then( m => m.ShopPageModule)
+      },
+      {
+        path: ':id',
+        loadChildren: () => import('./shop-product/shop-product.module').then( m => m.ShopProductPageModule)
+      },
+    ],
+    
   },
   {
     path: 'about',
     loadChildren: () => import('./about/about.module').then( m => m.AboutPageModule)
+  },  {
+    path: 'cart-modal',
+    loadChildren: () => import('./cart-modal/cart-modal.module').then( m => m.CartModalPageModule)
   },
+  {
+    path: 'order-success',
+    loadChildren: () => import('./order-success/order-success.module').then( m => m.OrderSuccessPageModule)
+  },
+
+  
 
 ];
 

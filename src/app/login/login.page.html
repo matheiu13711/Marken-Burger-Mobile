@@ -12,9 +12,9 @@
       <h5 style="margin-left: 10px; color: var(--color-1);"><b>LOGIN TO YOUR MARKEN ACCOUNT</b></h5>
       <div class="login">
         <input type="text" id="email" formControlName="email" class="form-default" autocomplete="off"
-          placeholder="Enter your Username or Email">
+          placeholder="Enter your Email">
           <div *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">
-            <p *ngIf="loginForm.get('email').errors?.required" class="form-err-msg">Email or Username is required.</p>
+            <p *ngIf="loginForm.get('email').errors?.required" class="form-err-msg">Email is required.</p>
           </div>
 
         <input type="password" id="password" formControlName="password" class="form-default" autocomplete="off"
