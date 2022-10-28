@@ -68,7 +68,7 @@
     font-family: Ubuntu !important;
     font-size: 22px;
     margin: 0px auto;
-    margin-top: 50px;
+    margin-top: 30px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
                 rgba(0, 0, 0, 0.07) 0px 2px 4px,
                 rgba(0, 0, 0, 0.07) 0px 4px 8px, 
@@ -110,13 +110,13 @@
     justify-items: center;
     width: 90%;
     height: auto;
-    background: #d8d8d8;
+    background: #171717;
     border-radius: 10px;
     padding: 10px;
     font-family: Ubuntu !important;
     font-size: 22px;
     margin: 0px auto;
-    margin-top: 50px;
+    margin-top: 30px;
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
                 rgba(0, 0, 0, 0.07) 0px 2px 4px,
@@ -133,9 +133,11 @@
 
                 h3{
                     font-size: 21px;
+                    color: white;
 
                     span{
                         font-weight: bold;
+                        color: #FFBF00;
                     }
                 }
 

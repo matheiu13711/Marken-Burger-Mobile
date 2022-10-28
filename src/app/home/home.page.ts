@@ -18,6 +18,11 @@ export class HomePage implements OnInit {
     initialSlide: 1,
   };
 
+  slideOpts = {
+    initialSlide: 0,
+    speed: 400
+  };
+
   constructor(
     private apiService:  ApiService
   ) {}

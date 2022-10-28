@@ -14,6 +14,9 @@
     </div>
 
     <div class="main-content">
+      <div class="header-logo">
+        <img src="assets/img/logo transparent.png">
+      </div>
       <div class="main-content-title">
         Fresh and Delicious
       </div>
@@ -30,7 +33,7 @@
           <ion-col>
           </ion-col>
           <ion-col>
-            <ion-button class="custom-button" size="small" style="border-radius: 0px">Read More</ion-button>
+            <ion-button class="custom-button" size="small" style="border-radius: 0px" [routerLink]="['/about']">Read More</ion-button>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -70,6 +73,48 @@
         </ion-slide>
       </ion-slides>
     </div>
+
+    <!--NEWS-->
+    <h2 class="title-product">News</h2>
+    <ion-slides pager="true" [options]="slideOpts">
+      <ion-slide>
+        
+        <div class="homepage-card-outline">
+          <div class="homepage-card-above" >
+            Burger of the Month
+          </div>
+          <img class="homepage-card-image" src="assets/img/burger-builder.jpg">
+          <div class="homepage-card-content ion-text-left">
+            The burger made by Antone Cooper was chosen as the Best Burger of the Month and consists of beef patty, pepper jack cheese, onion, and special sauce.
+          </div>
+
+        </div>
+
+      </ion-slide>
+      <ion-slide>
+        <div class="homepage-card-outline">
+          <div class="homepage-card-above" >
+            Certified Angus Beef
+          </div>
+          <img class="homepage-card-image" src="assets/img/patty.jpg">
+          <div class="homepage-card-content ion-text-left">
+            Marken Burger, one of the largest stores in Metro Manila is investing in Angus beef to satisfy and guarantee the supply of high-quality patties.
+          </div>
+
+        </div>
+      </ion-slide>
+      <ion-slide>
+        <div class="homepage-card-outline">
+          <div class="homepage-card-above" >
+            Flash Sale
+          </div>
+          <img class="homepage-card-image" src="assets/img/burger-sale.jpg">
+          <div class="homepage-card-content ion-text-left">
+            Selected burgers will go on sale. The limited-time promotion begins on November 10, 2022. Catch it from 9 am to 5 pm.
+          </div>
+        </div>
+      </ion-slide>
+    </ion-slides>
 
 </ion-content>
 
