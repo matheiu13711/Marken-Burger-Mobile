@@ -53,6 +53,10 @@ export class ApiService {
     return this.http.post(env.apiURL + '/api/order', data);
   }
 
+  trackOrder(data: any){
+    return this.http.get(env.apiURL + '/api/orderGeneratedID/' + data);
+  }
+
   // Alerts
   async failedActionAlert(message) {
     const alert = await this.alertController.create({
