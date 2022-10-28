@@ -37,6 +37,7 @@ export class LoginPage implements OnInit {
     this.loginData = data;
     if(data.status_code == 200){
       this.router.navigate(['home']);
+      this.ApiService.successActionAlert('Login Successfully');
       console.log(data);
       localStorage.setItem('token', data.token);
       localStorage.setItem('id', data.id);
@@ -44,6 +45,7 @@ export class LoginPage implements OnInit {
     } else{
       console.log(data);
       console.log('Email or password is incorrect');
+      this.ApiService.failedActionAlert('Email or password is incorrect');
     }
     });
     

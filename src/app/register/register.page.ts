@@ -58,7 +58,11 @@ export class RegisterPage implements OnInit {
     this.ApiService.postRegister(registerSubmit).subscribe((data: any) => {
       this.Registerdata = data;
       this.router.navigate(['login']);
+      this.ApiService.successActionAlert('Registered Successfully');
       console.log(data);
+    }, (err: any) =>{
+      console.log(err);
+      this.ApiService.failedActionAlert('Failed to Register! Please Try Again');
     });
 
   
