@@ -45,7 +45,8 @@ export class ShopPage implements OnInit {
   }
 
   previousPage(){
-    this.navCtrl.back();
+    // this.navCtrl.back();
+    this.router.navigateByUrl('home');
   }
 
   async openCart(){

@@ -49,6 +49,8 @@ export class CartService {
 
   successOrder(data: any){
     this.orderDetails = data;
+    this.cart = [];
+    this.cartItemCount.next(0);
   }
 
   getCartItemCount(){
