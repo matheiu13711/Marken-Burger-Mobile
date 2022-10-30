@@ -27,9 +27,9 @@
           <p *ngIf="registerForm.get('name').errors?.required" class="form-err-msg">Full Name is required.</p>
         </div>
 
-        <input type="tel" class="form-default" placeholder="Phone Number" formControlName="phone_number">
-        <div *ngIf="registerForm.get('phone_number').invalid && registerForm.get('phone_number').touched" style="display: flex; flex-wrap: wrap;">
-          <p *ngIf="registerForm.get('phone_number').errors?.required" class="form-err-msg">Phone Number is required.</p>
+        <input type="tel" class="form-default" placeholder="Phone Number (63...)" formControlName="phone_number">
+        <div *ngIf="registerForm.get('phone_number').invalid && registerForm.get('phone_number').touched">
+          <p *ngIf="registerForm.get('phone_number').errors?.maxLength" class="form-err-msg">Please enter valid Phone Number.</p>
         </div>
 
         <div style="width: 100%; padding: 10px;">
